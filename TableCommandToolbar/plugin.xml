@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="TableCommandToolbar.category"
+            name="TableCommandToolbar.category">
+      </category>
+      <view
+            category="TableCommandToolbar.category"
+            class="views.View"
+            icon="icon/fantom.png"
+            id="TableCommandToolbar.view"
+            name="TableCommandToolbar.view"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:TableCommandToolbar.view?after=additions">
+         <command
+               commandId="TableCommandToolbar.command"
+               icon="icon/fantom.png"
+               id="TableCommandToolbar.command.toolbar"
+               label="テーブル表示"
+               style="push"
+               tooltip="ツールバー">
+         </command>
+         <toolbar
+               id="TableCommandToolbar.toolbar">
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="handler.ViewHandler"
+            commandId="TableCommandToolbar.command">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="TableCommandToolbar.category"
+            name="TableCommandToolbar.category">
+      </category>
+      <command
+            categoryId="TableCommandToolbar.category"
+            id="TableCommandToolbar.command"
+            name="TableCommandToolbar.command">
+      </command>
+   </extension>
+
+</plugin>
