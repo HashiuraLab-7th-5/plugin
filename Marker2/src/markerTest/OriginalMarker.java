@@ -16,24 +16,24 @@ public class OriginalMarker {
 	{
 
 		Map<String, Object> attributes = new HashMap<String, Object>();
-		attributes.put(IMarker.TRANSIENT, true);    // ƒ}[ƒJ[‚Ì‰i‘±‰»:true
-		attributes.put(IMarker.PRIORITY, Integer.valueOf(IMarker.PRIORITY_NORMAL));      // ƒ}[ƒJ[‚Ì—Dæ“x:’†
-		attributes.put(IMarker.SEVERITY, Integer.valueOf(IMarker.SEVERITY_WARNING));    // ƒ}[ƒJ[‚Ìd—v“x:Œx
-		attributes.put(IMarker.LINE_NUMBER, line);  // ƒ}[ƒJ[‚ğ•\¦‚³‚¹‚és”Ô†
-		attributes.put(IMarker.MESSAGE, message); // ƒ}[ƒJ[‚É•\¦‚·‚éƒƒbƒZ[ƒW
+		attributes.put(IMarker.TRANSIENT, true);    // ãƒãƒ¼ã‚«ãƒ¼ã®æ°¸ç¶šåŒ–:true
+		attributes.put(IMarker.PRIORITY, Integer.valueOf(IMarker.PRIORITY_NORMAL));      // ãƒãƒ¼ã‚«ãƒ¼ã®å„ªå…ˆåº¦:ä¸­
+		attributes.put(IMarker.SEVERITY, Integer.valueOf(IMarker.SEVERITY_WARNING));    // ãƒãƒ¼ã‚«ãƒ¼ã®é‡è¦åº¦:è­¦å‘Š
+		attributes.put(IMarker.LINE_NUMBER, line);  // ãƒãƒ¼ã‚«ãƒ¼ã‚’è¡¨ç¤ºã•ã›ã‚‹è¡Œç•ªå·
+		attributes.put(IMarker.MESSAGE, message); // ãƒãƒ¼ã‚«ãƒ¼ã«è¡¨ç¤ºã™ã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 
-        try {
-        	MarkerUtilities.createMarker(resource, attributes, MARKER_ID);  // ƒ}[ƒJ[‚ğì¬
-        } catch (CoreException e) {
-        	e.printStackTrace();
-        }
+		try {
+			MarkerUtilities.createMarker(resource, attributes, MARKER_ID);  // ãƒãƒ¼ã‚«ãƒ¼ã‚’ä½œæˆ
+		} catch (CoreException e) {
+			e.printStackTrace();
+		}
 	}
 
 	
 	public static void deleteMarker(IResource resource)
 	{
 		try {
-        	resource.deleteMarkers(MARKER_ID, false, IResource.DEPTH_ZERO);  // ƒ}[ƒJ[‚ğì¬
+        	resource.deleteMarkers(MARKER_ID, false, IResource.DEPTH_ZERO);  // ãƒãƒ¼ã‚«ãƒ¼ã‚’ä½œæˆ
         } catch (CoreException e) {
         	e.printStackTrace();
         }
